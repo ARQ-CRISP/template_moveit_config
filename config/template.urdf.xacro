@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="template">
+
+    <!-- Include the xacro files corresponding to your robots here -->
+    <xacro:include filename="<path_to_a_xacro_file>"/>
+    <xacro:include filename="<path_to_another_xacro_file>"/>
+
+    <!-- Can be anything, you are free to choose -->
+    <link name="world"/>
+
+    <!-- You can add some arguments to make it configurable -->
+    <xacro:arg name="<arg1>" default="<val1>"/>
+    <xacro:arg name="<arg2>" default="<val2>"/>
+
+    <!-- Create a fixed joint between the reference frame (world) and the robot -->
+    <joint name="world_to_arm_joint" type="fixed">
+        <parent link="world"/>
+        <child link="<base_link_of_the_robot>"/>
+        <origin xyz="0. 0. $(arg <arg2>)" rpy="0 0.0 0"/>
+    </joint>
+
+    <!-- Add the robot arm -->
+    <xacro:robot_arm option1="<value1>"/>
+
+    <!-- Add the gripper -->
+    <robot_manipulator option="<value>">
+        <!-- You can specify some options here if defined in the xacro file -->
+    </robot_manipulator>
+
+</robot>

@@ -1,0 +1,18 @@
+controller_list:
+  - name: arm_trajectory_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - <robot_arm_joint_1>
+      - <robot_arm_joint_2>
+      - <robot_arm_joint_3>
+
+# Uncomment out the following block when running in simulation / comment it out when you run it on the real hardware
+  - name: <manipulator_name>_trajectory_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - <manipulator_joint_1>
+      - <manipulator_joint_2>
