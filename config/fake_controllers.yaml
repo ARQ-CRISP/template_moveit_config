@@ -4,6 +4,6 @@ controller_list:
       - <robot_arm_joint_1>
       - <robot_arm_joint_2>
       - <robot_arm_joint_3>
-  - name: fake_endeffector_controller
+  - name: fake_manipulator_controller
     joints:
       []
