@@ -58,7 +58,7 @@
 
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="arm_ee" parent_link="<ee_link_of_robot_arm>" group="end_effector" parent_group="arm" />
-    <end_effector name="arm_and_manipulator_ee" parent_link="<manipulator_name>" group="manipulator" parent_group="arm_and_manipulator" />
+    <end_effector name="arm_and_manipulator_ee" parent_link="<link_name_of_manipulator>" group="manipulator" parent_group="arm_and_manipulator" />
     <end_effector name="<manipulator_name_finger_i>_ee" parent_link="<tip_link_of_the_manipulator>" group="<manipulator_name_finger_i>_ee" parent_group="<manipulator_name_finger_i>" />
     <end_effector name="<manipulator_name_finger_i2>_ee" parent_link="<tip2_link_of_the_manipulator>" group="<manipulator_name_finger_i2>_ee" parent_group="<manipulator_name_finger_i2>" />
 
